@@ -1,0 +1,25 @@
+body {
+	border: 0px;
+	margin: auto;
+}
+
+#front {
+	color: #ff0000;
+	z-index: 1;	
+	position: absolute;
+	font-size: 100px;
+	font-family: impact;
+	align: center;
+	width: 100%;
+	border-style: solid 10px red;
+	text-align: center;
+	vertical-align: center;
+	text-shadow: 3px 3px #000000;
+	margin-top: 200px;
+	transition: margin-top 0.5s;
+}
+
+#front:hover {
+	color: #00ff00;
+	margin-top: 600px;
+}
