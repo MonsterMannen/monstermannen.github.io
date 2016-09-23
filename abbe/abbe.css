@@ -10,16 +10,30 @@ body {
 	font-size: 100px;
 	font-family: impact;
 	align: center;
-	width: 100%;
+	width: 30%;
 	border-style: solid 10px red;
 	text-align: center;
 	vertical-align: center;
 	text-shadow: 3px 3px #000000;
 	margin-top: 200px;
+	/* 
 	transition: margin-top 0.5s;
+	*/
+	animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+    border-style: none;
+}
+			
+@keyframes example {
+    0%   {color:red; left:0px; top:50px;}
+    /* 25%  {color:yellow; left:200px; top:0px;} */
+    50%  {color:green; left:70%; top:50px;}
+    /* 75%  {color:green; left:0px; top:200px;} */
+    100% {color:yellow; left:0px; top:50px;}
 }
 
 #front:hover {
 	color: #00ff00;
-	margin-top: 600px;
-}
+	/* margin-top: 600px; */
