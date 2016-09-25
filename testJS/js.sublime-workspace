@@ -1,0 +1,323 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"ran",
+				"randint"
+			],
+			[
+				"you",
+				"youtube_func"
+			],
+			[
+				"sear",
+				"searchString"
+			],
+			[
+				"vi",
+				"video_url"
+			],
+			[
+				"co",
+				"content"
+			],
+			[
+				"start",
+				"startswith"
+			],
+			[
+				"kill",
+				"killProgram"
+			],
+			[
+				"poke",
+				"pokemonsToScan"
+			],
+			[
+				"pok",
+				"pokemonsToScan"
+			],
+			[
+				"po",
+				"pokemonsToScan"
+			],
+			[
+				"star",
+				"startswith"
+			],
+			[
+				"twitter",
+				"twitterURL"
+			],
+			[
+				"html",
+				"htmlCopy"
+			],
+			[
+				"twitt",
+				"twitterURL"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"t",
+				"title"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 173.0,
+		"last_filter": "prefere",
+		"selected_items":
+		[
+			[
+				"prefere",
+				"Preferences: Key Bindings"
+			],
+			[
+				"preferences ke",
+				"Preferences: Key Bindings"
+			],
+			[
+				"preferences",
+				"Preferences: Browse Packages"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"preferences package settings ",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"install p",
+				"Install Package Control"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Viktor/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Viktor/AppData/Roaming/Sublime Text 3/Installed Packages/Package Control.sublime-package",
+		"/C/Users/Viktor/AppData/Roaming/Sublime Text 3/Installed Packages/Browser Refresh.sublime-package",
+		"/E/Random/Programmering/web/monstermannen.github.io/ayylmao/ayylmao.css",
+		"/E/Random/Programmering/web/monstermannen.github.io/ayylmao/index.html",
+		"/E/Random/Programmering/web/monstermannen.github.io/abbe/abbe.css",
+		"/E/Random/Programmering/web/monstermannen.github.io/abbe/index.html",
+		"/E/Random/Programmering/web/monstermannen.github.io/abbe/abbe.html",
+		"/E/Random/Programmering/web/monstermannen.github.io/index.html",
+		"/E/Random/Programmering/web/monstermannen.github.io/abbe.html",
+		"/E/Random/Programmering/web/abbe sida/style.css",
+		"/E/Random/Programmering/web/abbe sida/abbe.html",
+		"/E/Random/Programmering/web/abbe sida/Hem « Albert Karlsson.html",
+		"/E/Random/Programmering/Python/discordbot/TwitterScanner.py",
+		"/E/Random/Programmering/Python/discordbot/DiscoBotPy.py",
+		"/E/Random/Programmering/Python/discordbot/Login.py",
+		"/E/Random/Programmering/Python/skypebot/skypeBot.py",
+		"/E/Random/Programmering/Java/dictionaryCreater/src/Generator.java",
+		"/E/Random/Programmering/Python/discordbot/LoLapi.py",
+		"/E/Random/Programmering/Python/discordbot/Gui.py",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/ascii.c",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/ascii.h",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/basic.project",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/basic.mk",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/basic.txt",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/defs.h",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/delay.c",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/delay.h",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/helper.c",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/helper.h",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/keypad.h",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/keypad.c",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/main.c",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/md407-ram.x",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/rf.c",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/rf.h",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/timer.c",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/timer.h",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/usart.c",
+		"/E/Skola/projekt datatekniskt/dat290/Workspace/basic/usart.h",
+		"/E/Skola/projekt datatekniskt/david_kod/Filer_till_PIS/autopong.c",
+		"/E/Random/Programmering/Python/discordbot/poGoTwitterScanner.py",
+		"/E/Random/Programmering/Python/PoGoTwitterScanner/poGoTwitterScanner.py",
+		"/E/Pogo bot3/Translations/de.json",
+		"/E/Pogo bot3/PokemonGo.RocketAPI.Console.exe",
+		"/E/Pogo bot3/PokeData/AdditionalPokeData.json",
+		"/E/Skola/projekt datatekniskt/latex/latex_guide.tex",
+		"/E/Hämtade Filer/mall-protokoll.tex",
+		"/E/Random/Programmering/Python/redditBot/redditBot.py",
+		"/E/Pogo Bot 2/Configs/incubators.json",
+		"/E/Random/Programmering/Python/redditBot/login.py",
+		"/E/Random/Programmering/Python/imageTest/quickGrab.py"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"mess",
+			"mess ",
+			"mess",
+			"random",
+			"QUIT",
+			"print"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"quit"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "js.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 121.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>JS test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+			</div>
+			<div class="menu">
+				<div class="innerMenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Portfolio.html">Portfolio</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="innerWrapper">
+				<div class="main">
+					>Portfolio
+					<div class="w3-content w3-section">
+
+						<img class="images w3-animate-left" src="http://www.albertkarlssonfoto.se/bilder/IMG_5586.jpg" style="width:800px">
+						<img class="images w3-animate-left" src="http://www.albertkarlssonfoto.se/bilder/IMG_5579.jpg" style="width:800px">
+						<img class="images w3-animate-left" src="http://www.albertkarlssonfoto.se/bilder/IMG_1316.jpg" style="width:800px">
+						<img class="images w3-animate-left" src="http://www.albertkarlssonfoto.se/bilder/IMG_2168.jpg" style="width:800px">
+
+						<a class="w3-btn-floating" onclick="prev()">&#10094;</a>
+						<a class="w3-btn-floating" onclick="next()">&#10095;</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var index = 0;
+			showImage(index);
+			runLoop();
+
+			function next(){
+				showImage(++index);
+			}
+
+			function prev(){
+				showImage(--index);
+			}
+			
+			function showImage(n){
+				var x = document.getElementsByClassName("images");
+				if(n >= x.length){
+					index = 0;
+				}
+				if(n < 0){
+					index = x.length-1;
+				}
+				for (i = 0; i < x.length; i++) {
+     				x[i].style.display = "none";
+  				}
+				x[index].style.display = "block";
+			}
+			
+			function runLoop(){
+				next();
+				setTimeout(runLoop, 5000);
+			}
+		</script>
+
+	</body>
+</html>
