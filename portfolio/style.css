@@ -43,11 +43,11 @@ body {
 
 img {
 	padding: 5px;
-	transition: opacity 0.6s;
+	transition: opacity 0.4s;
 }
 
 img:hover {
-	opacity: 0.5;
+	opacity: 0.4;
 }
 
 #modalImg {
@@ -106,4 +106,19 @@ a:visited {
 
 #img1:hover, #img2:hover, #img3:hover {
 	opacity: 1;
+}
+
+/* test */
+#imageHoverText {
+	visibility: hidden;
+	position: absolute;
+	z-index: 100;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 50px;
+	border: none;
+	padding: 5px;
+	width: 27%;
+	text-align: center;
+	pointer-events: none;
+	opacity: 0.8;
 }

@@ -5,15 +5,50 @@
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<link rel="icon" type="image/png" href="favicon.png">
 	<script>
+		// get screen resolution
+		resHeight = window.screen.availHeight;
+		resWidth = window.screen.availWidth
+		var stillHover = false;
+
 		function imgClick(element){
 			document.getElementById('modal').style.display='block';
 			document.getElementById('modalImg').src = element.src;
 			document.getElementById('wrapper01').style.opacity = 0.1;
+			stillHover=false;
 		}
 
 		function closeModal(){
 			document.getElementById('modal').style.display='none';
 			document.getElementById('wrapper01').style.opacity = 1;
+		}
+
+		function showImageText(element){
+			// get image to wrapper offset
+			var x = element.offsetLeft;
+			var y = element.offsetTop;
+
+			// get image width and height
+			var width = element.clientWidth;
+			var height = element.clientHeight;
+
+			// get text div and set height (width set in css)
+			var imgText = document.getElementById('imageHoverText');
+			
+			//imgText.style.height = height;
+
+			// set position of text div
+			imgText.style.top = y+250+(height/2)-50;
+			imgText.style.left = resWidth*0.1 + x;
+
+			// make it visible
+			imgText.style.visibility = "visible";
+		}
+
+		function hideImageText(){
+			if(stillHover){
+				return;
+			}
+			document.getElementById('imageHoverText').style.visibility = "hidden";
 		}
 	</script>
 </head>
@@ -26,6 +61,10 @@
     	</div>
   	</div>
 
+<!-- Text on images -->
+	<div id="imageHoverText">
+		Show Image
+	</div>
 
 <div class="wrapper" id="wrapper01">
 	<div class="header">
@@ -38,23 +77,23 @@
 		<div class="grid">
 			<div class="w3-third">
 				<!-- images row 1-->
-				<img onClick="imgClick(this)" src="http://animals.sandiegozoo.org/sites/default/files/juicebox_slides/owl_southern_white-faced.jpg" style="width:100%">
-				<img onClick="imgClick(this)" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Bubo_virginianus_06.jpg" style="width:100%">
-				<img onClick="imgClick(this)" src="https://aos.iacpublishinglabs.com/question/aq/1400px-788px/are-owls-endangered_144f6b6a-d841-4d3c-82b5-9106c0bfd051.jpg?domain=cx.aos.ask.com" style="width:100%">
+				<img onClick="imgClick(this)" onmouseover="showImageText(this)" onmouseleave="hideImageText()" src="http://animals.sandiegozoo.org/sites/default/files/juicebox_slides/owl_southern_white-faced.jpg" style="width:100%">
+				<img onClick="imgClick(this)" onmouseover="showImageText(this)" onmouseleave="hideImageText()" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Bubo_virginianus_06.jpg" style="width:100%">
+				<img onClick="imgClick(this)" onmouseover="showImageText(this)" onmouseleave="hideImageText()" src="https://aos.iacpublishinglabs.com/question/aq/1400px-788px/are-owls-endangered_144f6b6a-d841-4d3c-82b5-9106c0bfd051.jpg?domain=cx.aos.ask.com" style="width:100%">
 
 			</div>
 			<div class="w3-third">
 				<!-- images row 2 -->
-				<img onClick="imgClick(this)" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Athene_noctua_(cropped).jpg" style="width:100%">
-				<img onClick="imgClick(this)" src="https://aos.iacpublishinglabs.com/question/aq/1400px-788px/how-do-owls-communicate_4e03fc89-4e2a-4b22-b01a-f3df3bb1d3bb.jpg?domain=cx.aos.ask.com" style="width:100%">
-				<img onClick="imgClick(this)" src="http://www.audubon.org/sites/default/files/styles/article_hero_inline/public/apa_2011_19156_150509_danielbehm_eastern_screechowl_kk.jpg?itok=d7go5oRD" style="width:100%">
+				<img onClick="imgClick(this)" onmouseover="showImageText(this)" onmouseleave="hideImageText()" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Athene_noctua_(cropped).jpg" style="width:100%">
+				<img onClick="imgClick(this)" onmouseover="showImageText(this)" onmouseleave="hideImageText()" src="https://aos.iacpublishinglabs.com/question/aq/1400px-788px/how-do-owls-communicate_4e03fc89-4e2a-4b22-b01a-f3df3bb1d3bb.jpg?domain=cx.aos.ask.com" style="width:100%">
+				<img onClick="imgClick(this)" onmouseover="showImageText(this)" onmouseleave="hideImageText()" src="http://www.audubon.org/sites/default/files/styles/article_hero_inline/public/apa_2011_19156_150509_danielbehm_eastern_screechowl_kk.jpg?itok=d7go5oRD" style="width:100%">
 				
 			</div>
 			<div class="w3-third">
 				<!-- images row 3 -->
-				<img onClick="imgClick(this)" src="https://s3.amazonaws.com/classconnection/955/flashcards/4302955/jpg/strigiformes-1525818790607745A84.jpg" style="width:100%">
-				<img onClick="imgClick(this)" src="http://upload.wikimedia.org/wikipedia/commons/9/98/GreatHornedOwl-Wiki.jpg" style="width:100%">
-				<img onClick="imgClick(this)" src="http://4.bp.blogspot.com/-RCgCHOoBS-I/UQA_5IoQMBI/AAAAAAAAAp4/JpW1csKcrbU/s1600/owl+2.jpg" style="width:100%">
+				<img onClick="imgClick(this)" onmouseover="showImageText(this)" onmouseleave="hideImageText()" src="https://s3.amazonaws.com/classconnection/955/flashcards/4302955/jpg/strigiformes-1525818790607745A84.jpg" style="width:100%">
+				<img onClick="imgClick(this)" onmouseover="showImageText(this)" onmouseleave="hideImageText()" src="http://upload.wikimedia.org/wikipedia/commons/9/98/GreatHornedOwl-Wiki.jpg" style="width:100%">
+				<img onClick="imgClick(this)" onmouseover="showImageText(this)" onmouseleave="hideImageText()" src="http://4.bp.blogspot.com/-RCgCHOoBS-I/UQA_5IoQMBI/AAAAAAAAAp4/JpW1csKcrbU/s1600/owl+2.jpg" style="width:100%">
 				
 			</div>
 		</div>
