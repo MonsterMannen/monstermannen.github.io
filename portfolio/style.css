@@ -81,10 +81,20 @@ a:hover {
 	opacity: 1;
 }
 
+a:visited {
+	text-decoration: none;
+	opacity: 0.7;
+}
+
 #monster {
 	opacity: 1;
 }
 
 #monster:hover {
 	color: #f4a460;
+}
+
+.vs {
+	font-size: 11px;
+	opacity: 0.5;
 }
