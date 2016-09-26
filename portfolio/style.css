@@ -21,7 +21,6 @@ body {
 	vertical-align: middle;
 	letter-spacing: 2px;
 	opacity: 0.7;
-	
 }
 
 .headerLine {
@@ -75,6 +74,7 @@ img:hover {
 a {
 	text-decoration: none;
 	opacity: 0.7;
+	transition: 0.4s;
 }
 
 a:hover {
@@ -97,4 +97,13 @@ a:visited {
 .vs {
 	font-size: 11px;
 	opacity: 0.5;
+	line-height: 20px;
+}
+
+#img1, #img2, #img3 {
+	opacity: 0.6;
+}
+
+#img1:hover, #img2:hover, #img3:hover {
+	opacity: 1;
 }
