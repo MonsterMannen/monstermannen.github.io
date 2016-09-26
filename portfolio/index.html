@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<script>
+		function imgClick(element){
+			document.getElementById('modal').style.display='block';
+			document.getElementById('modalImg').src = element.src;
+			document.getElementById('wrapper01').style.opacity = 0.1;
+		}
+
+		function closeModal(){
+			document.getElementById('modal').style.display='none';
+			document.getElementById('wrapper01').style.opacity = 1;
+		}
+	</script>
+</head>
+<body>
+
+<!-- Modal (popup) -->
+	<div id="modal" class="w3-modal w3-card-8" onclick="closeModal()">
+    	<div class="w3-modal-content">
+        	<img id="modalImg" src="" width="100%">
+    	</div>
+  	</div>
+
+
+<div class="wrapper" id="wrapper01">
+	<div class="header">
+		<div class="headerLine">
+			Portfolio
+		</div>
+		By <a id="monster" href="https://github.com/MonsterMannen" target="_blank">MonsterMannen</a>
+	</div>
+	<div class="main">
+		<div class="grid">
+			<div class="w3-third">
+				<!-- images row 1-->
+				<img onClick="imgClick(this)" src="http://animals.sandiegozoo.org/sites/default/files/juicebox_slides/owl_southern_white-faced.jpg" style="width:100%">
+				<img onClick="imgClick(this)" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Bubo_virginianus_06.jpg" style="width:100%">
+				<img onClick="imgClick(this)" src="https://aos.iacpublishinglabs.com/question/aq/1400px-788px/are-owls-endangered_144f6b6a-d841-4d3c-82b5-9106c0bfd051.jpg?domain=cx.aos.ask.com" style="width:100%">
+
+			</div>
+			<div class="w3-third">
+				<!-- images row 2 -->
+				<img onClick="imgClick(this)" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Athene_noctua_(cropped).jpg" style="width:100%">
+				<img onClick="imgClick(this)" src="https://aos.iacpublishinglabs.com/question/aq/1400px-788px/how-do-owls-communicate_4e03fc89-4e2a-4b22-b01a-f3df3bb1d3bb.jpg?domain=cx.aos.ask.com" style="width:100%">
+				<img onClick="imgClick(this)" src="http://www.audubon.org/sites/default/files/styles/article_hero_inline/public/apa_2011_19156_150509_danielbehm_eastern_screechowl_kk.jpg?itok=d7go5oRD" style="width:100%">
+				
+			</div>
+			<div class="w3-third">
+				<!-- images row 3 -->
+				<img onClick="imgClick(this)" src="http://animalia-life.com/data_images/owl/owl3.jpg" style="width:100%">
+				<img onClick="imgClick(this)" src="http://upload.wikimedia.org/wikipedia/commons/9/98/GreatHornedOwl-Wiki.jpg" style="width:100%">
+				<img onClick="imgClick(this)" src="http://4.bp.blogspot.com/-RCgCHOoBS-I/UQA_5IoQMBI/AAAAAAAAAp4/JpW1csKcrbU/s1600/owl+2.jpg" style="width:100%">
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<br><br>
+	<a href="http://www.facebook.com" target="_blank">Facebook</a><br>
+	<a href="http://www.twitter.com" target="_blank">Twitter</a><br>
+	<a href="http://www.nsa.gov" target="_blank">NSA</a>
+</div>
+</body>
+</html>
