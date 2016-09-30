@@ -3,18 +3,25 @@
 	<title>Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="icon" type="image/png" href="favicon.png">
 	<script>
+		// close popup with escape
+		document.addEventListener("keyup", function(event) {
+    		if (event.keyCode == 27) {	// 27 = esc
+        		closeModal();
+    		}
+		})
+
 		// get screen resolution
 		resHeight = window.screen.availHeight;
 		resWidth = window.screen.availWidth
-		var stillHover = false;
 
 		function imgClick(element){
 			document.getElementById('modal').style.display='block';
 			document.getElementById('modalImg').src = element.src;
 			document.getElementById('wrapper01').style.opacity = 0.1;
-			stillHover=false;
+			hideImageText();
 		}
 
 		function closeModal(){
@@ -33,8 +40,6 @@
 
 			// get text div and set height (width set in css)
 			var imgText = document.getElementById('imageHoverText');
-			
-			//imgText.style.height = height;
 
 			// set position of text div
 			imgText.style.top = y+250+(height/2)-50;
@@ -45,14 +50,50 @@
 		}
 
 		function hideImageText(){
-			if(stillHover){
-				return;
-			}
 			document.getElementById('imageHoverText').style.visibility = "hidden";
+		}
+
+		// change images. not done
+		function setImages(album){
+			var images = document.getElementsByTagName("IMG");
+			var imgName;
+			var ext;
+
+			if(album == 1){
+				imgName = "images/owls/";
+			}else if(album == 2){
+				imgName = "images/porsche/";
+			}
+
+			for(var i = 0; i < 10; i++) {
+				ext = i + ".jpg";
+				images[i].src = imgName + ext;
+				// https://scontent-arn2-1.xx.fbcdn.net/v/t35.0-12/14525078_1180941275285524_6829251992115239226_o.jpg?oh=faa02fc5ca69f8052299bae9716cf33c&oe=57EEA419
+				// http://puu.sh/rpXQf/5c36f3939b.png
+			}
+		}
+
+		function dropDown(){
+		    var x = document.getElementById("settingsDropDown");
+		    if (x.className.indexOf("w3-show") == -1) {
+		        x.className += " w3-show";
+		    } else {
+		        x.className = x.className.replace(" w3-show", "");
+		    }
+		    x.style.top = "50px";
+		    x.style.right = "5px";
 		}
 	</script>
 </head>
 <body>
+
+<div class="w3-dropdown-click w3-right">
+	<i onclick="dropDown()" class="material-icons w3-xxxlarge w3-right">menu</i>
+    <div id="settingsDropDown" class="w3-dropdown-content w3-card-4 w3-animate-opacity" style="right:0">
+    	<a onClick="setImages(1)" href="#">Owls</a>
+    	<a onClick="setImages(2)" href="#">Porsches</a>
+	</div>
+</div>
 
 <!-- Modal (popup) -->
 	<div id="modal" class="w3-modal w3-card-8" onclick="closeModal()">
