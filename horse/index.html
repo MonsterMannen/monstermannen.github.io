@@ -1,72 +1,79 @@
 <html>
 <head>
-    <style>
-        body {
-            margin: auto;
-        }
-        .controls {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-    </style>
+<title>horsec0ck</title>
+<style>
+    body {
+        margin: auto;
+    }
+    .controls {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+</style>
 </head>
 <body>
-
+    <!-- audio -->
     <div class="controls">
-        <audio controls autoplay>
+        <audio id="bgAudio" controls autoplay>
             <source src="horse.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
 
-<div id="player"></div>
-<script>
-    // 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
+    <!-- YT video -->
+    <div id="player"></div>
+    <script>
+        // set background audio volume
+        window.onload = function() {
+            var backgroundAudio=document.getElementById("bgAudio");
+            backgroundAudio.volume=0.7;
+        }
 
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        // YT API iFrame player stuff
+        var tag = document.createElement('script');
 
-    // 3. This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
-    var player;
-    function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-     height: '100%',
-     width: '100%',
-     playerVars: {
-               autoplay: 1,
-               loop: 1,
-               controls: 0,
-               showinfo: 0,
-               autohide: 1,
-               modestbranding: 1,
-               playlist: 'Xfh83gMrG4o',
-               vq: 'hd1080'},
-     videoId: 'Xfh83gMrG4o',
-     events: {
-       'onReady': onPlayerReady,
-       'onStateChange': onPlayerStateChange
-     }
-    });
-    }
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    // 4. The API will call this function when the video player is ready.
-    function onPlayerReady(event) {
-    event.target.playVideo();
-    player.mute();
-    }
+        // This function creates an <iframe> (and YouTube player)
+        // after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+         height: '100%',
+         width: '100%',
+         playerVars: {
+                   autoplay: 1,
+                   loop: 1,
+                   controls: 0,
+                   showinfo: 0,
+                   autohide: 1,
+                   modestbranding: 1,
+                   playlist: 'Xfh83gMrG4o', // makes video loop
+                   vq: 'hd1080'},
+         videoId: 'Xfh83gMrG4o',
+         events: {
+           'onReady': onPlayerReady,
+           'onStateChange': onPlayerStateChange
+         }
+        });
+        }
 
-    var done = false;
-    function onPlayerStateChange(event) {
+        // The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+            event.target.playVideo();
+            player.mute();
+        }
 
-    }
-    function stopVideo() {
-    player.stopVideo();
-    }
-</script>
+        var done = false;
+        function onPlayerStateChange(event) {
 
+        }
+        function stopVideo() {
+            player.stopVideo();
+        }
+    </script>
 </body>
 </html>
