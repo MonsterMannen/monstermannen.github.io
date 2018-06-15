@@ -1,0 +1,47 @@
+<html>
+<body>
+
+<script>
+fetch("https://raw.githubusercontent.com/MonsterMannen/DiscordBotNodeJs/master/stats.js")
+    .then(response => response.text())
+    .then(text => {
+        var r1 = Math.floor(Math.random() * 3000);
+        var r2 = Math.floor(Math.random() * 3000);
+        var r3 = Math.floor(Math.random() * 3000);
+        var json = JSON.parse(text);
+
+        setTimeout(() => {
+            setGuilds(json);
+        }, r1);
+
+        setTimeout(() => {
+            setUsers(json);
+        }, r2);
+
+        setTimeout(() => {
+            setCommands(json);
+        }, r3);
+    });
+
+function setGuilds(json){
+    document.getElementById("guilds").innerHTML = json.guilds;
+}
+
+function setUsers(json){
+    document.getElementById("users").innerHTML = json.users;
+}
+
+function setCommands(json){
+    document.getElementById("commands").innerHTML = json.commands;
+}
+
+</script>
+
+<h1>Stats</h1>
+
+guilds: <span id="guilds">loading...</span> <br />
+users: <span id="users">loading...</span> <br />
+commands: <span id="commands">loading...</span> <br />
+
+</body>
+</html>
