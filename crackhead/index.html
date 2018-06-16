@@ -1,47 +1,181 @@
 <html>
+<head>
+    <title>CrackHead discord bot</title>
+    <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/kTwxc4l.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" />
+    <script>
+    fetch("https://raw.githubusercontent.com/MonsterMannen/DiscordBotNodeJs/master/stats.js")
+        .then(response => response.text())
+        .then(text => {
+            // fake load times to look professional :^)
+            var r1 = Math.floor(Math.random() * 2000);
+            var r2 = Math.floor(Math.random() * 2000);
+            var r3 = Math.floor(Math.random() * 2000);
+            var json = JSON.parse(text);
+
+            setTimeout(() => {
+                setGuilds(json);
+            }, r1);
+
+            setTimeout(() => {
+                setUsers(json);
+            }, r2);
+
+            setTimeout(() => {
+                setCommands(json);
+            }, r3);
+        });
+
+    function setGuilds(json){
+        document.getElementById("guilds").innerHTML = json.guilds;
+    }
+
+    function setUsers(json){
+        document.getElementById("users").innerHTML = json.users;
+    }
+
+    function setCommands(json){
+        document.getElementById("commands").innerHTML = json.commands;
+    }
+
+    </script>
+
+    <style>
+        body {
+            font-family: "Source Sans Pro";
+            background-color: #2C2F33;
+            color: #A9BAC5;
+            font-size: 40px;
+        }
+        #llama {
+            width: 350px;
+            height: 400px;
+            border-style: none;
+            position:absolute;
+            bottom:0;
+            right:0;
+            text-align: center;
+        }
+        #stats {
+            position: relative;
+            left: 270px;
+            width: 400px;
+            height: 300px;
+            border-style: none;
+            padding: 30px;
+        }
+        #cracko {
+            width: 120px;
+            height: 120px;
+            border-style: none;
+            margin: auto;
+            float: left;
+        }
+        #cracko img {
+            border-radius: 50%;
+        }
+        #bot {
+            background-color: #7289DA;
+            color: #FFFFFF;
+            width: 75px;
+            height: 50px;
+            padding: 4px;
+            border-radius: 12%;
+            float: left;
+            margin: 5px;
+        }
+        #botname {
+            float: left;
+            margin: 5px;
+            font-size: 50px;
+        }
+        #fullname {
+            position: relative;
+            left: 100px;
+            width: 600px;
+            height: 120px;
+            border-style: none;
+            padding: 30px;
+            color: #FFFFFF;
+        }
+        #myCanvas {
+            display: block;
+        }
+        #button {
+        font-family: "Source Sans Pro", Calibri, sans-serif;
+        position: absolute;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        padding: 10px 25px;
+        left: 350px;
+        width: 400px;
+        margin-left: -100px;
+        top: 600px;
+        border-radius: 10px;
+        color: white;
+        text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+        border: 5px solid transparent;
+        border-bottom-color: rgba(0,0,0,0.35);
+        background: #7289DA;
+        cursor: pointer;
+        outline: 0 !important;
+
+            animation: pulse 1s infinite alternate;
+            transition: background 0.4s, border 0.2s, margin 0.2s;
+        }
+        #button:hover {
+            background: #98FB98;
+            margin-top: -1px;
+            animation: none;
+        }
+        #button:active {
+            border-bottom-width: 0;
+            margin-top: 5px;
+        }
+        @keyframes pulse {
+            0% {
+                margin-top: 0px;
+            }
+            100% {
+                margin-top: 6px;
+            }
+        }
+
+    }
+    </style>
 <body>
 
-<script>
-fetch("https://raw.githubusercontent.com/MonsterMannen/DiscordBotNodeJs/master/stats.js")
-    .then(response => response.text())
-    .then(text => {
-        var r1 = Math.floor(Math.random() * 3000);
-        var r2 = Math.floor(Math.random() * 3000);
-        var r3 = Math.floor(Math.random() * 3000);
-        var json = JSON.parse(text);
 
-        setTimeout(() => {
-            setGuilds(json);
-        }, r1);
 
-        setTimeout(() => {
-            setUsers(json);
-        }, r2);
+<div id="fullname">
+    <div id="cracko">
+        <img src="https://i.imgur.com/kTwxc4l.png"></img>
+    </div>
 
-        setTimeout(() => {
-            setCommands(json);
-        }, r3);
-    });
+    <div id="botname">
+        &nbsp; CrackHead
+    </div>
 
-function setGuilds(json){
-    document.getElementById("guilds").innerHTML = json.guilds;
-}
+    <div id="bot">
+        BOT
+    </div>
+</div>
 
-function setUsers(json){
-    document.getElementById("users").innerHTML = json.users;
-}
+<div id="stats">
+    Guilds: <span id="guilds">loading...</span> <br />
+    Users: <span id="users">loading...</span> <br />
+    Commands: <span id="commands">loading...</span> <br />
+</div>
 
-function setCommands(json){
-    document.getElementById("commands").innerHTML = json.commands;
-}
 
-</script>
+<button id="button" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ','mywindow');">Invite me</button>
+<canvas id="myCanvas" width="500" height="500"></canvas>
 
-<h1>Stats</h1>
 
-guilds: <span id="guilds">loading...</span> <br />
-users: <span id="users">loading...</span> <br />
-commands: <span id="commands">loading...</span> <br />
+<div id="llama">
+    <img src="https://vignette.wikia.nocookie.net/fortnite/images/4/42/Fortnite_llama_pinata.png/revision/latest?cb=20170729175047" width=150 heigh=150></img>
+    <img src="https://discordapp.com/assets/e4923594e694a21542a489471ecffa50.svg" width=300 heigh=300></img>
+</div>
 
 </body>
 </html>
