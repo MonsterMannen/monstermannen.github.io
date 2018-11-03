@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>test</title>
+</head>
+<body>
+
+<script>
+    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    targetUrl = 'https://wol.gg/stats/euw/abdfg12345/'
+
+    fetch(proxyUrl + targetUrl)
+        .then(data => data.text())
+        .then(text => {
+            //console.log(text);
+
+            var pos = text.indexOf('<div id="time-hours" class="time center"><p>');
+            text = text.substring(pos + 44);
+            pos = text.indexOf("<br>");
+            var hours = text.substring(0, pos);
+            //console.log(hours);
+
+            document.write(`{ hours: ${hours} }`)
+
+        })
+
+</script>
+
+</body>
+</html>
