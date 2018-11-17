@@ -1,42 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MonsterMannen</title>
-	<link rel="shortcut icon" type="image/x-icon" href="logo.jpg" />
-	<style>
-		body {
-			background-color: #000000;
-			color: #00EE00;
-			font-size: 24px;
-			font-family: verdana;
-			text-align: center;
-		}
-		a {
-			color: #00EE00;
-			text-decoration: none;
-		}
-		a:hover {
-			color: #009900;
-		}
-	</style>
+    <title>MonsterMannen</title>
+    <link rel="shortcut icon" type="image/x-icon" href="logo.jpg" />
+
+    <style>
+        #main {
+            border-style: none;
+            width: 40%;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        #rest {
+            border-style: none;
+            width: 100%;
+            height: 600px;
+            font-size: 20px;
+            font-family: verdana;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #link1 { width: 150px; }
+        #link2 { width: 150px; }
+        #link3 { width: 150px; }
+        #link4 { width: 150px; }
+
+        #link1 a:visited,
+        #link1 a:link { color: #00ee00; }
+
+        #link2 a:visited,
+        #link2 a:link { color: #ff0000; }
+
+        #link3 a:visited,
+        #link3 a:link { color: #2a475e; }
+
+        #link4 a:visited,
+        #link4 a:link { color: #6a5b4d; }
+
+    </style>
 </head>
 <body>
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
 
-	<br />
-	<br />
-	+--------+---------+--------+<br />
-	| <a href="https://github.com/MonsterMannen" target="_blank">github</a> | <a href="https://www.youtube.com/user/UsingLaptop" target="_blank">youtube</a> | <a href="http://steamcommunity.com/id/monstermannen" target="_blank">steam</a> | <br /> 
-	+--------+---------+--------+<br />
+    <div id="main">
+        <h1>MonsterMannen</h1>
+        <h3 onmouseover="h3over(this)" onmouseout="h3leave(this)">
+            Viktor Svensson :-)
+        </h3>
+    </div>
 
+    <div id="rest">
+        <div id="randomButton">
+            <button type="button" onmousedown="randomize()">Randomize</button>
+        </div>
+
+        <div id="link1">
+            <a href="https://github.com/MonsterMannen">💻Github</a>
+        </div>
+
+        <div id="link2">
+            <a href="https://www.youtube.com/user/UsingLaptop">📺YouTube</a>
+        </div>
+
+        <div id="link3">
+            <a href="http://steamcommunity.com/id/monstermannen">🎮Steam</a>
+        </div>
+
+        <div id="link4">
+            <a href="https://monstermannen.github.io/horse/">🐴Horse</a>
+        </div>
+    </div>
+
+
+    <script>
+        var ids = ["randomButton", "link1", "link2", "link3", "link4"];
+
+        function h3over(x){
+            x.innerText = "Viktor Svensson 😄";
+        }
+
+        function h3leave(x){
+            x.innerText = "Viktor Svensson :-)";
+        }
+
+        function randomize(){
+            for(var i = 0; i < ids.length; i++){
+                var d = document.getElementById(ids[i]);
+
+                var x = 100 + Math.random() * 1400;     // 100 - 1500
+                var y = 200 + Math.random() * 650;      // 200 - 850
+                d.style.position = "absolute";
+                d.style.left = x + 'px';
+                d.style.top = y + 'px';
+            }
+        }
+
+        window.onload = randomize;
+    </script>
 </body>
 </html>
